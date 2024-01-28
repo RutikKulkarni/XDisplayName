@@ -32,7 +32,7 @@ const App = () => {
             value={firstName}
             onChange={handleFirstNameChange}
             placeholder="Enter first name"
-            name="firstName" 
+            name="firstName"
           />
         </label>
         <br />
@@ -43,7 +43,7 @@ const App = () => {
             value={lastName}
             onChange={handleLastNameChange}
             placeholder="Enter last name"
-            name="lastName" 
+            name="lastName"
           />
         </label>
         <br />
@@ -52,8 +52,7 @@ const App = () => {
 
       {fullName && (
         <div>
-          <h2>Full Name:</h2>
-          <p data-testid="fullNameDisplay">{fullName}</p>
+          <p data-testid="fullNameDisplay">Full Name: {fullName}</p>
         </div>
       )}
     </div>
