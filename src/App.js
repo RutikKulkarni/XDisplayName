@@ -33,6 +33,7 @@ const App = () => {
             onChange={handleFirstNameChange}
             placeholder="Enter first name"
             name="firstName"
+            required
           />
         </label>
         <br />
@@ -44,6 +45,7 @@ const App = () => {
             onChange={handleLastNameChange}
             placeholder="Enter last name"
             name="lastName"
+            required
           />
         </label>
         <br />
