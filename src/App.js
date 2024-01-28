@@ -32,6 +32,7 @@ const App = () => {
             value={firstName}
             onChange={handleFirstNameChange}
             placeholder="Enter first name"
+            name="firstName" 
           />
         </label>
         <br />
@@ -42,16 +43,17 @@ const App = () => {
             value={lastName}
             onChange={handleLastNameChange}
             placeholder="Enter last name"
+            name="lastName" 
           />
         </label>
         <br />
-        <button type="submit">Submit</button>
+        <button type="submit" data-testid="submitBtn">Submit</button>
       </form>
 
       {fullName && (
         <div>
           <h2>Full Name:</h2>
-          <p>{fullName}</p>
+          <p data-testid="fullNameDisplay">{fullName}</p>
         </div>
       )}
     </div>
