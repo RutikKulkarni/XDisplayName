@@ -5,25 +5,20 @@ const App = () => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [fullName, setFullName] = useState('');
-  const [isFormValid, setIsFormValid] = useState(false);
 
   const handleFirstNameChange = (e) => {
     setFirstName(e.target.value);
-    validateForm();
   };
 
   const handleLastNameChange = (e) => {
     setLastName(e.target.value);
-    validateForm();
-  };
-
-  const validateForm = () => {
-    setIsFormValid(firstName.trim() !== '' && lastName.trim() !== '');
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setFullName(`${firstName} ${lastName}`);
+    if (firstName.trim() !== '' && lastName.trim() !== '') {
+      setFullName(`${firstName} ${lastName}`);
+    }
   };
 
   return (
@@ -50,9 +45,7 @@ const App = () => {
           />
         </label>
         <br />
-        <button type="submit" disabled={!isFormValid}>
-          Submit
-        </button>
+        <button type="submit">Submit</button>
       </form>
 
       {fullName && (
